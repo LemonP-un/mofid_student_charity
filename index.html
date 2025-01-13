@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خیریه مفید</title>
+    <title>سایت خیریه مهر</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,15 +15,42 @@
             box-sizing: border-box;
             background-color: #f4f4f9;
             color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: #1e1e1e;
+            color: #f0f0f0;
         }
         header {
             background: linear-gradient(to right, #4caf50, #43a047);
             color: white;
             padding: 1rem 0;
             text-align: center;
+            position: relative;
         }
         header h1 {
             font-size: 2.5rem;
+        }
+        #dark-mode-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #fff;
+            color: #333;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        #dark-mode-toggle:hover {
+            background-color: #43a047;
+            color: white;
+        }
+        body.dark-mode #dark-mode-toggle {
+            background-color: #333;
+            color: #fff;
         }
         nav {
             display: flex;
@@ -56,6 +84,10 @@
             background: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode .container {
+            background-color: #2e2e2e;
         }
         section {
             margin-bottom: 2rem;
@@ -79,10 +111,10 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: background-color 0.3s, color 0.3s;
         }
-        .project img {
-            max-width: 100%;
-            border-radius: 8px;
+        body.dark-mode .project {
+            background-color: #3e3e3e;
         }
         footer {
             text-align: center;
@@ -100,10 +132,8 @@
 </head>
 <body>
     <header>
-        <h1>خیریه دانش آموزی مفید</h1>
-        <p>بیا تا ره نیک مردان آزاده گیریم
-چو ایستاده ایم دست افتاده گیریم
-</p>
+        <h1>خیریه مهر</h1>
+        <button id="dark-mode-toggle">حالت تاریک</button>
     </header>
     <nav>
         <a href="#about">درباره ما</a>
@@ -160,5 +190,20 @@
     <footer>
         <p>&copy; 2025 خیریه مهر. کلیه حقوق محفوظ است.</p>
     </footer>
+    <script>
+        const darkModeToggle = document.querySelector('#dark-mode-toggle');
+
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+        });
+
+        // Restore dark mode setting from local storage
+        const isDarkMode = JSON.parse(localStorage.getItem('darkMode'));
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
 </body>
 </html>
