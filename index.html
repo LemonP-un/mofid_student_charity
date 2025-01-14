@@ -13,44 +13,17 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f4f4f9;
-            color: #333;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        body.dark-mode {
-            background-color: #1e1e1e;
-            color: #f0f0f0;
+            background-color: #1e1e1e; /* رنگ پس‌زمینه تاریک */
+            color: #f0f0f0; /* رنگ متن روشن */
         }
         header {
             background: linear-gradient(to right, #4caf50, #43a047);
             color: white;
             padding: 1rem 0;
             text-align: center;
-            position: relative;
         }
         header h1 {
             font-size: 2.5rem;
-        }
-        #dark-mode-toggle {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #fff;
-            color: #333;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        #dark-mode-toggle:hover {
-            background-color: #43a047;
-            color: white;
-        }
-        body.dark-mode #dark-mode-toggle {
-            background-color: #333;
-            color: #fff;
         }
         nav {
             display: flex;
@@ -81,13 +54,9 @@
             max-width: 1200px;
             margin: 2rem auto;
             padding: 1rem;
-            background: white;
+            background: #2e2e2e; /* رنگ پس‌زمینه کانتینر تاریک */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s, color 0.3s;
-        }
-        body.dark-mode .container {
-            background-color: #2e2e2e;
         }
         section {
             margin-bottom: 2rem;
@@ -106,18 +75,17 @@
         }
         .project {
             flex: 1 1 calc(33.333% - 1rem);
-            background: #f9f9f9;
+            background: #3e3e3e; /* رنگ پس‌زمینه پروژه‌ها تاریک */
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: background-color 0.3s, color 0.3s;
         }
         .progress-container {
             width: 80%;
             max-width: 500px;
             margin: 50px auto;
-            background: #ddd;
+            background: #444; /* رنگ پس‌زمینه نوار پیشرفت */
             border-radius: 25px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -134,13 +102,7 @@
         .total-amount {
             margin-top: 15px;
             font-size: 1.2em;
-            color: #333;
-        }
-        body.dark-mode .total-amount {
-            background-color: #2e2e2e;
-        }
-        body.dark-mode .project {
-            background-color: #3e3e3e;
+            color: #f0f0f0; /* رنگ متن جمع کل */
         }
         footer {
             text-align: center;
@@ -159,7 +121,6 @@
 <body>
     <header>
         <h1>خیریه دانش آموزی مفید</h1>
-        <button id="dark-mode-toggle">حالت تاریک</button>
     </header>
     <nav>
         <a href="#about">پروژه های فعال</a>
@@ -171,29 +132,28 @@
         <section id="about">
             <h2>پروژه های فعال</h2>
             <div class="progress-container">
-            <div class="progress-bar" id="progress-bar">0%</div>
+                <div class="progress-bar" id="progress-bar">0%</div>
             </div>
-        <div class="total-amount">
-             <span style="color: orange;">جمع کل:</span> <span id="total" style="color: red;">10,000,000</span> <span style="color: orange;">تومان</span><br>
-            <span style="color: orange;">مبلغ جمع‌شده:</span> <span id="collected" style="color: red;">4,500,000</span> <span style="color: orange;">تومان</span>
-        </div>
-        </div>
+            <div class="total-amount">
+                <span>جمع کل:</span> <span id="total">10,000,000</span> <span>تومان</span><br>
+                <span>مبلغ جمع‌شده:</span> <span id="collected">4,500,000</span> <span>تومان</span>
+            </div>
         </section>
         <section id="projects">
             <h2>پروژه‌ها</h2>
             <div class="projects">
                 <div class="project">
-                    <img src="https://imgurl.ir/uploads/f665744_033be788-eac2-4cd2-a42c-418c07d1a146.jpg" alt="پروژه 1" width=50% height=auto>
+                    <img src="https://imgurl.ir/uploads/f665744_033be788-eac2-4cd2-a42c-418c07d1a146.jpg" alt="پروژه 1" width="50%" height="auto">
                     <h3>میلاد امیرالمؤمنین علی (ع)</h3>
-                    <p>اطعام‌و‌اهدای‌بسته‌های‌زمستانه‌بـــه‌پاکــبانــان‌شــریف<p>
+                    <p>اطعام‌و‌اهدای‌بسته‌های‌زمستانه‌بـــه‌پاکــبانــان‌شــریف</p>
                 </div>
                 <div class="project">
-                    <img src="https://imgurl.ir/uploads/n966297_-5978886113357581407_121.jpg" alt="پروژه 2"  width=50% height=auto>
+                    <img src="https://imgurl.ir/uploads/n966297_-5978886113357581407_121.jpg" alt="پروژه 2" width="50%" height="auto">
                     <h3>یلدای مهربانی</h3>
                     <p>تهیه و توزیع بسته های یلدا برای خانواده های نیازمند</p>
                 </div>
                 <div class="project">
-                    <img src="https://imgurl.ir/uploads/i600919_IMG_20241213_212126_879_1.jpg" alt="پروژه 3" width=50% height=auto>
+                    <img src="https://imgurl.ir/uploads/i600919_IMG_20241213_212126_879_1.jpg" alt="پروژه 3" width="50%" height="auto">
                     <h3>خرید صندلی</h3>
                     <p>خرید صندلی برای مدرسه محمدیه</p>
                 </div>
@@ -219,20 +179,6 @@
         <p>&copy; 2025 خیریه مفید. کلیه حقوق محفوظ است.</p>
     </footer>
     <script>
-        const darkModeToggle = document.querySelector('#dark-mode-toggle');
-
-        darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            localStorage.setItem('darkMode', isDarkMode);
-        });
-
-        // Restore dark mode setting from local storage
-        const isDarkMode = JSON.parse(localStorage.getItem('darkMode'));
-        if (isDarkMode) {
-            document.body.classList.add('dark-mode');
-        }
-
         const totalAmount = 10000000; // مبلغ کل به تومان
         const collectedAmount = 4500000; // مبلغ جمع‌شده به تومان
 
