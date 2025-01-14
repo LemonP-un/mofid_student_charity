@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه بنفش</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0e6f6;
+            color: #4b0082;
+            margin: 0;
+            padding: 0;
+        }
+        .video-section {
+            background-color: #e6d9f7; /* بکگراند بنفش کم‌رنگ */
+            padding: 20px;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+        }
+        .content {
+            padding: 20px;
+        }
+        .description {
+            margin-bottom: 30px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            background-color: #e6d9f7; /* بکگراند بنفش کم‌رنگ */
+            padding: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="video-section">
+        <video controls>
+            <source src="your-video-file.mp4" type="video/mp4">
+            مرورگر شما از فرمت ویدیو پشتیبانی نمی‌کند.
+        </video>
+    </section>
+
+    <section class="content">
+        <div class="description">
+            <p>
+                اینجا توضیحاتی در مورد موضوع صفحه قرار می‌گیرد. شما می‌توانید اطلاعات بیشتری در این بخش اضافه کنید.
+                مثلا این توضیحات می‌توانند به معرفی فیلم یا موضوعات مرتبط با گالری عکس‌ها اختصاص یابند.
+            </p>
+        </div>
+
+        <div class="gallery">
+            <img src="image1.jpg" alt="تصویر 1">
+            <img src="image2.jpg" alt="تصویر 2">
+            <img src="image3.jpg" alt="تصویر 3">
+            <img src="image4.jpg" alt="تصویر 4">
+        </div>
+    </section>
+
+</body>
+</html>
