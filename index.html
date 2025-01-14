@@ -200,3 +200,22 @@
             <h2>تماس با ما</h2>
             <p>برای اطلاعات بیشتر، لطفاً به ما پیام دهید:</p>
             <p>ایمیل: kheirih.danshamozimofide@gmail
+<script>
+    // تعریف مبلغ کل و مبلغ جمع‌آوری‌شده
+    const totalAmount = 10000000; // مبلغ کل به تومان
+    const collectedAmount = 4500000; // مبلغ جمع‌آوری‌شده به تومان
+
+    // محاسبه درصد
+    const percentage = Math.round((collectedAmount / totalAmount) * 100);
+
+    // گرفتن المان‌های مرتبط
+    const progressBar = document.getElementById('progress-bar');
+    const totalAmountElem = document.getElementById('total');
+    const collectedAmountElem = document.getElementById('collected');
+
+    // مقداردهی به بار و نمایش مقادیر
+    progressBar.style.width = percentage + '%';
+    progressBar.textContent = `${collectedAmount.toLocaleString()} تومان (${percentage}%)`;
+    totalAmountElem.textContent = totalAmount.toLocaleString();
+    collectedAmountElem.textContent = collectedAmount.toLocaleString();
+</script>
